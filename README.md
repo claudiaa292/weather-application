@@ -20,7 +20,7 @@ Even if the application was originally intended to call the weather APIs, free A
 Libraries:
 
 - Bootstrap
-<img src="medical-appointment2.jpg">
+<img src="Weather-app-presentation2.jpg">
 
 # To execute the application, the following steps must be performed:
 - Run **npm install** :  to install all the project dependencies
