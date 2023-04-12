@@ -1,0 +1,28 @@
+ <div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="input-group my-4">
+        <select class="custom-select" (change)="onCityChange($event)">
+          <option selected>Selecteaza un oras</option>
+          <ng-container *ngFor="let city of cities">
+            <option [value]="city.value">{{ city.label }}</option>
+          </ng-container>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col-6 col-md-4 mb-3" *ngFor="let weather of hourlyWeather">
+          <div class="card weather-card">
+            <div class="card-body">
+              <p class="card-text">Hour: {{ weather.hour }}:00</p>
+              <p class="card-text temperature">Temperature: {{ weather.temperature }}°C</p>
+              <p class="card-text weather-description">Weather: {{ weather.weather }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!selectedCity" class="text-center">Niciun oras selectat</div>
+    </div>
+  </div>
+</div>

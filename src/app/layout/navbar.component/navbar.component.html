@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <div class="d-flex flex-fill">
+      <div class="navbar-brand d-flex flex-fill align-items-center gap-3">
+        <i class="bi bi-cloud"></i>
+        Weather
+      </div>
+  
+  
+      <div class="d-block">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="d-flex">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" (click)="openRoute('currentDay')" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav">Current day</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openRoute('hourlyWeatherForecast')" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav">Hourly weather forecast</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openRoute('sevenDaysForecast')" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav">7 days forecast</a>
+              </li>
+            </ul>
+    
+          </div>
+        </div>
+      </div>
+  <!-- toggle dark / light theme -->
+      <div class="d-flex align-items-center justify-content-center ps-4 ms-2 cursor-pointer">
+        <div class="form-check form-switch scale-2x "  (click)="toggleTheme()">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+        </div>
+      </div>
+<!--       
+      <div class="oval" [ngClass]="{ ovalSelected: theme == 'bootstrap' }" (click)="toggleTheme()">
+        <div class="button" [ngClass]="{ buttonSelected: theme == 'bootstrap' }"></div>
+      </div>
+   -->
+  
+      <button class="btn btn-outline-secondary d-lg-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+<div class="weather-card">
+  <div class="weather-info-container dark-mode">
+    <ng-container *ngIf="showHistory">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Day of week</th>
+            <th>Temperature</th>
+            <th>Weather</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entry of weatherHistory">
+            <td>{{ entry.date }}</td>
+            <td>{{ entry.day_of_week }}</td>
+            <td>{{ entry.temperature }}°C</td>
+            <td>{{ entry.weather }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+    <ng-container *ngIf="!showHistory">
+      <ul class="weather-list" *ngIf="locationData">
+        <li class="weather-item">Temperature: {{ locationData!.temperature }} °C</li>
+        <li class="weather-item">Weather: {{ locationData!.weather }} </li>
+        <li class="weather-item">Humidity: {{ locationData!.humidity }} %</li>
+        <li class="weather-item">Wind speed: {{ locationData!.wind_speed }} km/h</li>
+        <li class="weather-item">Wind direction: {{ locationData!.wind_direction }}</li>
+      </ul>
+    </ng-container>
+  </div>
+</div>

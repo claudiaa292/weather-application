@@ -1,0 +1,20 @@
+<div class="input-group my-4">
+  <select class="custom-select" (change)="onCityChange($event)">
+    <option selected>Selecteaza un oras</option>
+    <ng-container *ngFor="let city of cities">
+      <option [value]="city.value">{{ city.label }}</option>
+    </ng-container>
+  </select>
+</div>
+
+<div *ngIf="selectedCity">
+  <div class="card-weather">
+    <app-weather-card
+      [city]="selectedCity.label"
+      [currentDate]="currentDate"
+      [showHistory]="false"
+    ></app-weather-card>
+  </div>
+</div>
+
+<div *ngIf="!selectedCity" class="text-center">Niciun oras selectat</div>
