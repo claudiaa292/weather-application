@@ -1,6 +1,25 @@
-# WeatherApp
+# Weather-application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+The Weather-application will have real-time weather information by utilizing a Weather API. The initial data will display the user's current location. The app is designed to be responsive for both desktop and mobile devices.
+The application will also offer optional features, including the ability for the user to forecast weather for up to seven days or 24 hours. Users can view weather data for multiple cities (not more than 7) and save their favorite locations. Additionally, the app offers two themes: day and night, to enhance the user's experience.
+Even if the application was originally intended to call the weather APIs, free APIs were expiring after some calls, so I implemented a service that would give me random data. The app is not finished, is a work in progress.
+
+# Project was based on the following technologies and tooling:
+- [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3 with Typescript
+
+- HTML
+
+- SASS 
+
+- Git
+
+- Visual Studio Code
+
+- NG-Bootstrap
+
+Libraries:
+
+- Bootstrap
 
 ## Development server
 
