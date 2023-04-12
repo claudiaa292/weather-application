@@ -21,6 +21,11 @@ Libraries:
 
 - Bootstrap
 
+# To execute the application, the following steps must be performed:
+- Run **npm install** :  to install all the project dependencies
+- Run **npm install -g @angular/cli**: to install Angular CLI globally on your system
+- Run **ng serve**: to run the project locally
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
